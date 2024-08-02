@@ -1,0 +1,66 @@
+@use '../utilities/variables';
+
+
+.example{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.finalGame{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    @media (min-width: variables.$sizeDesktop) {
+        flex-direction: row;
+    }
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+}
+
+#board-again-desktop{
+    display: none;
+    @media (min-width: variables.$sizeDesktop) {
+        display: block;
+    }
+}
+
+#board-again-mobile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @media (min-width: variables.$sizeDesktop) {
+        display: none;
+    }
+}
+
+
+.step3{
+    --paddingBtn: 20px;
+    @media (min-width: variables.$sizeDesktop) {
+        --paddingBtn: 50px;
+    }
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    padding: var(--paddingBtn);
+
+    @media (min-width: variables.$sizeDesktop) {
+        flex-direction: column;
+    }
+
+    h1{
+        @media (min-width: variables.$sizeDesktop) {
+            padding-bottom: 60px;
+            padding-top: 0px;          
+        }
+        padding-top: 25px;
+
+    }
+}

@@ -1,0 +1,79 @@
+@use '../utilities/variables';
+
+
+
+
+.templateGalery {
+    display: grid;
+    grid-gap: variables.$gapMobile;
+
+    @media (min-width: 1440px) {
+        grid-gap: variables.$gapDesktop;
+    }
+
+    
+
+    .btnContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media (max-width: 450px){
+            padding-bottom: variables.$marginBeetwenSectionMobile;
+        }
+    }
+
+
+    @media (min-width: 1440px) {
+        grid-auto-rows: 450px;
+        grid-template-columns: repeat(auto-fill, 240px);
+
+        button {
+            display: none;
+        }
+    }
+
+    .contenedor {
+        position: relative;
+        display: inline-block;
+        
+        height: 130px;
+
+        @media (max-width: 375px){
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        @media (min-width: 1440px) {
+           
+            height: 450px;
+            cursor: pointer;
+
+            img {
+                cursor: pointer;
+            }
+        }
+
+
+    }
+
+
+
+    p {
+        position: absolute;
+        text-align: start;
+
+        bottom: 20px;
+        left: 30px;
+        width: 150px;
+
+        @media (min-width: 1440px) {
+            bottom: 36px;
+        }
+    }
+
+    img {
+        object-fit: cover;
+        pointer-events: none;
+    }
+}

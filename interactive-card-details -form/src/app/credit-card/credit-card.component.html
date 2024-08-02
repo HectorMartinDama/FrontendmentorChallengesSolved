@@ -1,0 +1,132 @@
+<div class="main-container">
+    <div class="imgs">
+        <div id="gradiente"></div>
+        <div class="creditCardContainer">
+            <img id="frontCard" src="/assets/images/bg-card-front.png" alt="front credit card">
+            <span class="circle circle1"></span>
+            <span class="circle circle2"></span>
+
+            <p id="cardNumber">{{creditCard.cardNumber}}</p>
+            <p id="name">{{creditCard.name}}</p>
+            <p id="expDate">{{creditCard.expDateM}} / {{creditCard.expDateY}}</p>
+            <img id="backCard" src="/assets/images/bg-card-back.png" alt="back credit card">
+            <p id="cvv">{{creditCard.cvv}}</p>
+        </div>
+    </div>
+
+
+    <div class="formContainer">
+        
+
+        <!-- Form -->
+        <form [formGroup]="formAddCreditCard" *ngIf="!complete">
+
+            <!-- Name -->
+            <label for="POST-CardholderName">CARDHOLDER NAME</label>
+            <input type="text" (ngModelChange)="changeName($event)" (keypress)="onlyText($event)" [ngClass]="formAddCreditCard
+            .get('name')?.touched && formAddCreditCard.get('name')?.errors ? 'warning' : 'info'" formControlName="name"  minlength="1" maxlength="22" placeholder="e.g Jane Appleseed">
+            <!-- Errors from name -->
+            <div class="error" *ngIf="formAddCreditCard
+                                    .get('name')?.touched && formAddCreditCard
+                                    .get('name')?.errors?.['required']">
+                                    <p>Can't be blank</p>
+            </div>
+          
+            <!-- CardNumber -->
+            <label for="POST-CardholderName">CARD NUMBER</label>
+            <input type="text" id="cardNumber" (ngModelChange)="changeCardNumber($event)" (keypress)="onlyNumbers($event)" formControlName="cardNumber" [ngClass]="formAddCreditCard
+            .get('cardNumber')?.touched && formAddCreditCard.get('cardNumber')?.errors ? 'warning' : 'info'" minlength="16" maxlength="16" placeholder="e.g 1234 5678 9123 0000">
+            <!-- Errors from CardNumber -->
+            <div class="error" *ngIf="formAddCreditCard
+                                    .get('cardNumber')?.touched && formAddCreditCard
+                                    .get('cardNumber')?.errors?.['minlength']">
+                                    <p>Wrong format, required 16 digits</p>
+            </div>
+            <div class="error" *ngIf="formAddCreditCard
+                                    .get('cardNumber')?.touched && formAddCreditCard
+                                    .get('cardNumber')?.errors?.['required']">
+                                    <p>Can't be blank</p>
+            </div>
+            
+            
+    
+            <div class="exp-cvv">
+                <label style="margin">EXP. DATE (MM/YY)</label>
+                <label>CVV</label>
+            </div>
+            
+
+            <!-- ExpDate and Cvv -->
+            <div class="expDate">
+                <input type="text" formControlName="expM" (ngModelChange)="changeExpDateM($event)" (keypress)="onlyNumbers($event)" [ngClass]="formAddCreditCard
+                .get('expM')?.touched && formAddCreditCard.get('expM')?.errors ? 'warning' : 'info'" minlength="2" maxlength="2" placeholder="MM">
+                
+                
+
+                <input type="text" formControlName="expY" (ngModelChange)="changeExpDateY($event)" (keypress)="onlyNumbers($event)" [ngClass]="formAddCreditCard
+                .get('expY')?.touched && formAddCreditCard.get('expY')?.errors ? 'warning' : 'info'" minlength="2" maxlength="2" placeholder="YY">
+    
+                <input id="cvv" type="text" formControlName="cvv" (ngModelChange)="changeCvv($event)" (keypress)="onlyNumbers($event)" [ngClass]="formAddCreditCard
+                .get('cvv')?.touched && formAddCreditCard.get('cvv')?.errors ? 'warning' : 'info'" minlength="3" maxlength="3" placeholder="e.g 123">
+            </div>
+
+
+            <div class="errorsExpDate">
+                <!-- Errors from Cvv -->
+                <div class="error" id="errorCvv" *ngIf="formAddCreditCard
+                .get('cvv')?.touched && formAddCreditCard
+                .get('cvv')?.errors?.['required']">
+                    <p>Can't be blank</p>
+                </div>
+                <div class="error" id="errorCvv" *ngIf="formAddCreditCard
+                    .get('cvv')?.touched && formAddCreditCard
+                    .get('cvv')?.errors?.['minlength']">
+                    <p>Wrong format, CVV required 3 digits</p>
+                </div>
+
+                <!-- Errors from expM -->
+                <div class="error" *ngIf="formAddCreditCard
+                .get('expM')?.touched && formAddCreditCard
+                .get('expM')?.errors?.['required']">
+                    <p>Can't be blank</p>
+                </div>
+                <div class="error" *ngIf="formAddCreditCard
+                    .get('expM')?.touched && formAddCreditCard
+                    .get('expM')?.errors?.['minlength']" >
+                    <p>Wrong format, Month required 2 digits</p>
+                </div>
+
+                <!-- Errors from expY -->
+                <div class="error" *ngIf="formAddCreditCard
+                .get('expY')?.touched && formAddCreditCard
+                .get('expY')?.errors?.['required']">
+                    <p>Can't be blank</p>
+                </div>
+                <div class="error"  *ngIf="formAddCreditCard
+                    .get('expY')?.touched && formAddCreditCard
+                    .get('expY')?.errors?.['minlength']">
+                    <p>Wrong format, Year required 2 digits</p>
+                </div>
+
+            </div>
+                
+
+            
+            <!-- button -->
+            <button  type="submit" class="button" (click)="addCreditCard()">Confirm</button>
+        </form>
+
+
+
+        <div *ngIf="complete" class="formComplete">
+            <img src="/assets/images/icon-complete.svg" alt="complete icon">
+            <p id="title">THANK YOU!</p>
+            <p>We've added your card details</p>
+            <button class="button" (click)="finish()">Continue</button>
+        </div>
+        
+
+    </div>
+
+
+</div>

@@ -1,0 +1,14 @@
+@use '../utilities/variables';
+
+
+button{
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    border: 2px solid variables.$darkGray;
+    background-color: variables.$white;
+    width: 160px;
+    height: 40px;
+}
+
+

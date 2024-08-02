@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+body {
+  background: hsl(218, 23%, 16%);
+}
+
+.mainContainer {
+  display: grid;
+  place-content: center;
+  height: 100vh;
+}
+
+p {
+  color: hsl(150, 100%, 66%);
+  letter-spacing: 0.3rem;
+  font-family: "Manrope", sans-serif;
+  text-align: center;
+  padding-top: 2.5rem;
+  font-size: 12px;
+}
+
+h3 {
+  color: hsl(193, 38%, 86%);
+  font-size: 25px;
+  font-family: "Manrope", sans-serif;
+  text-align: center;
+}
+
+.card {
+  width: 340px;
+  min-height: 315px;
+  background: hsl(217, 19%, 24%);
+  border-radius: 1rem;
+}
+@media (min-width: 1440px) {
+  .card {
+    width: 540px;
+    min-height: 330px;
+  }
+}
+
+.cardBody {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-left: 25px;
+  padding-right: 25px;
+  overflow: hidden;
+}
+
+button {
+  background: hsl(150, 100%, 66%);
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  border: none;
+  position: absolute;
+  cursor: pointer;
+  transition: 0.5 ease;
+}
+button:hover {
+  box-shadow: 0 0 2rem 0 hsl(150, 100%, 66%), 0 0 2rem hsl(150, 100%, 66%);
+}
+
+.btnContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,194 @@
+@use 'variables';
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+
+* {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+body {
+    background-image: linear-gradient(to bottom, #af67e9, #9f67e9, #8d66e9, #7a66e8, #6565e7);
+    min-height: 100vh;
+}
+
+
+h1 {
+    font-weight: 700;
+    font-size: 30px;
+    text-align: center;
+
+    @media (max-width: 375px) {
+        padding-top: 30px;
+    }
+
+    @media (min-width: 1440px) {
+        text-align: initial;
+    }
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0px 10px 30px -15px;
+    border-radius: 2rem;
+
+    @media (max-width: 375px) {
+        flex-direction: column;
+        width: 330px;
+        height: 535px;
+    }
+
+
+    @media (min-width: 1440px) {
+        flex-direction: row;
+        width: 920px;
+        height: 508px;
+    }
+}
+
+
+.imagesContainer {
+
+
+    @media (max-width: 375px) {
+
+        width: 100%;
+        height: 0px;
+
+        display: block;
+        text-align: center;
+
+        img.illustration-woman-online-mobile {
+            width: 240px;
+            height: 180px;
+            position: relative;
+            bottom: 300px;
+        }
+
+        img.bg-pattern-mobile {
+            position: relative;
+            bottom: 90px;
+        }
+    }
+
+
+    @media (min-width: 1440px) {
+        position: relative;
+
+        img {
+            display: none;
+        }
+
+        width: 50%;
+        height: 100%;
+        background: url('/images/bg-pattern-desktop.svg'),
+        url('/images/illustration-woman-online-desktop.svg');
+        background-repeat: no-repeat;
+        background-size: 700px,
+        100%;
+        background-position-x: -300px,
+        -80px;
+        background-position-y: -203px,
+        50px;
+    }
+
+
+    .box {
+        @media (min-width: 1440px) {
+            position: absolute;
+            background-image: url('/images/illustration-box-desktop.svg');
+            background-repeat: no-repeat;
+            top: 180px;
+            left: -95px;
+            height: 100%;
+            width: 100%;
+        }
+    }
+}
+
+
+
+
+.faqContainer {
+    height: 70%;
+
+    @media (min-width: 1440px) {
+        width: 50%;
+    }
+}
+
+
+.accordion-content {
+
+
+    @media (max-width: 375px) {
+        width: 285px;
+    }
+
+    @media (min-width: 1440px) {
+        width: 360px;
+    }
+
+
+    header {
+        color: variables.$headerColor;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 10px 0;
+        padding-right: 15px;
+        cursor: pointer;
+        min-height: 30px;
+
+        &:hover {
+            color: variables.$headerHoverColor;
+        }
+
+        span {
+            font-size: 14px;
+        }
+    }
+
+    .description {
+        height: 0px;
+        padding-right: 15px;
+        transition: all 0.2s linear;
+        overflow: hidden;
+        color: variables.$descriptionColor;
+        border-bottom: 1px solid variables.$dividerColor;
+    }
+}
+
+.open {
+    header {
+
+        &:hover {
+            color: unset;
+        }
+
+        span {
+            font-weight: 700;
+        }
+
+        img {
+            transform: rotate(180deg);
+        }
+    }
+
+    .description {
+        padding-bottom: 15px;
+    }
+}

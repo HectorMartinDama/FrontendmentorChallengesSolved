@@ -1,0 +1,32 @@
+@use './sass/base/typo';
+@use './sass/components/footer';
+@use './sass/components/nav';
+@use './sass/components/button';
+@use './sass/components/galery';
+@use './sass/layout/galeryLayout';
+@use './sass/layout/footerLayout';
+@use './sass/layout/separatorLayout';
+@use './sass/layout/navLayout';
+@use './sass/base/animation';
+@use './sass/utilities/variables';
+@use './sass/layout/interactiveVrLayout';
+@use './sass/layout/marginsLayout';
+
+
+
+// global style of the size
+*{
+    padding: 0;
+    margin: 0;
+}
+
+a{
+    color: variables.$white;
+    text-decoration: none;   
+}
+
+
+// size img logo in the navbar and footer
+#logo{
+    height: 24px;
+}

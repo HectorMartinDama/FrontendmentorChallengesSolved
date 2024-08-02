@@ -1,0 +1,48 @@
+@use '../utilities/variables';
+
+
+main{
+    @media (min-width: 1440px) {
+        margin-right: variables.$marginMainDesktop;
+        margin-left: variables.$marginMainDesktop;
+    }
+    margin-right: variables.$marginMainMobile;
+    margin-left: variables.$marginMainMobile;   
+}
+
+.separator{
+    margin-top: variables.$marginBeetwenSectionMobile;
+    padding-bottom: variables.$marginTitleMobile;
+
+   
+
+    @media (min-width: 1440px){
+        padding-bottom: 80px;
+        padding-top: variables.$marginBeetwenSectionDesktop;
+    }
+}
+
+
+.interactiveVr{
+
+    padding-top: variables.$marginTitleMobile;
+
+
+   
+
+    @media (min-width: 1440px){
+        padding-top: 160px;
+    }
+}
+
+
+header{
+    padding-top: 70px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    @media (min-width: 1440px){
+        padding-left: 160px;
+        padding-right: 160px;
+    }
+}

@@ -1,0 +1,11 @@
+
+
+
+footer{
+    display: flex;
+    justify-content: center;
+
+    @media(min-width: 1440px){
+        justify-content: flex-end;
+    } 
+}

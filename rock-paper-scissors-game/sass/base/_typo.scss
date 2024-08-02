@@ -1,0 +1,62 @@
+
+
+@font-face{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    src: url('../fonts/BarlowSemiCondensed-SemiBold-600.woff2') format('woff2');
+    font-weight: 600;
+}
+
+*{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+.finalGame button, .board-name{
+    letter-spacing: 2px;
+}
+
+.btn-rules{
+    font-size: 15px;
+}
+
+
+
+
+.modal h3{
+    font-size: 25px;
+}
+
+
+.board-name{
+    font-size: 12px;
+    @media(min-width: 1440px){
+        font-size: 20px;
+    }
+}
+
+.message-result{
+    opacity: 0;
+    animation: 
+        var(--animation-fade-in) forwards,
+        var(--animation-slide-in-up) forwards;
+    animation-timing-function: var(--ease-squish-3);
+    text-align: center;
+    font-size: 40px;
+}
+
+h1{
+    font-size: 20px;
+}
+
+
+nav{
+    p{
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+    #board-score{
+        font-size: 30px;
+        @media(min-width: 1440px){
+            font-size: 50px;
+        }
+    }
+}

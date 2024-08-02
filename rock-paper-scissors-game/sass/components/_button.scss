@@ -1,0 +1,11 @@
+@use '../utilities/variables';
+
+.btn-rules{
+    background-color: transparent;
+    border: 2px solid variables.$darkText;
+    border-radius: 10px;
+    width: 130px;
+    height: 40px;
+}
+
+

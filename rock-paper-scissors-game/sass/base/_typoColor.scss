@@ -1,0 +1,15 @@
+@use '../utilities/variables';
+
+nav{
+    p{
+        color: variables.$scoreText;
+    }
+}
+
+.modal h3, nav h1{
+    color: variables.$darkText;
+}
+
+h1, button{
+    color: white;
+}

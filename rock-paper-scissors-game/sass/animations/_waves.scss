@@ -1,0 +1,55 @@
+// https://codepen.io/ofthedead/pen/rVLgNy#anon-login
+@use "../utilities/variables";
+
+
+
+
+.finalGame {
+
+  & .delay1 {
+      animation: waves 2.5s linear infinite;
+      animation-delay: .1s;
+  }
+
+  & .delay2 {
+      animation: waves 2.5s linear .7s forwards infinite,
+  }
+
+  & .delay3 {
+      animation: waves 2.5s linear 1.3s forwards infinite;
+  }
+
+ 
+}
+
+.circleWaves {
+  --circleWavesSize: 60px;
+  --circleWavesTopPosition: 34%;
+  @media (min-width: variables.$sizeDesktop) {
+    --circleWavesSize: 150px;
+    --circleWavesTopPosition: 57%;
+  }
+
+  z-index: -1;
+  top: var(--circleWavesTopPosition);
+  display: block;
+  height: var(--circleWavesSize);
+  width: var(--circleWavesSize);
+  border-radius: 50%;
+  background-color: variables.$headerOutline;
+  position: absolute;
+}
+
+@-webkit-keyframes waves {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(5);
+    opacity: 0;
+  }
+}
+
+

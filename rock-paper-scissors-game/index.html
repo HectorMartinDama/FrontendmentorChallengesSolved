@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="Canvas">
+    <meta name="color-scheme" content="light dark">
+    <link rel="shortcut icon" href="./images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Rock-Paper-Scissors-Game</title>
+</head>
+<body>
+
+    <header>
+      <nav>
+        <img src="images/logo-bonus.svg" alt="game logo">
+        <div class="board">
+            <h1 id="board-score"></h1>
+        </div>
+      </nav>
+    </header>
+
+    
+    
+    <main>
+
+        <section class="main-screen">
+            <div class="btnContainer">
+                <button class="circle" id="spock">
+                    <img src="images/icon-spock.svg" alt="spock icon">
+                </button>
+                
+                <button class="circle" id="scissors">
+                    <img src="images/icon-scissors.svg" alt="scissors icon">
+                </button>
+    
+                <button class="circle" id="paper">
+                    <img src="images/icon-paper.svg" alt="paper icon">
+                </button>
+                
+                <button class="circle" id="lizard">
+                    <img src="images/icon-lizard.svg" alt="lizard icon">
+                </button>
+                
+                <button class="circle" id="rock">
+                    <img src="images/icon-rock.svg" alt="rock icon">
+                </button>
+            </div> 
+        </section>
+
+        <section class="finalGame" style="display: none;">
+            
+            <div class="example">
+                <div class="step3" id="player">
+                    <h1 class="board-name">YOU PICKED</h1>
+                    <button class="circle-selected"><img src="" alt="icon"></button>
+                </div>
+
+                <div class="board-play-again" id="board-again-desktop">
+                    <h1 class="message-result"></h1>
+                    <button id="btn-play-again">PLAY AGAIN</button>
+                </div>
+                
+                <div class="step3" id="house">
+                    <h1 class="board-name">THE HOUSE PICKED</h1>
+                    <button class="circle-selected"><img src="" alt="icon"></button>
+                </div>
+            </div>
+            
+            <div class="board-play-again" id="board-again-mobile">
+                <h1 class="message-result"></h1>
+                <button id="btn-play-again">PLAY AGAIN</button>
+            </div>
+        </section>
+    </main>
+    
+    
+    
+  
+
+
+
+    <dialog id="dialog" class="modal">
+        <div class="modal-container">
+            <div class="nav-dialog">
+                <h3>RULES</h3>
+                <button class="btn-close" onclick="window.dialog.close()"><img src="images/icon-close.svg" alt="close icon"></button>
+            </div>
+            <div class="image-container">
+                <img src="images/image-rules-bonus.svg" alt="rules game">
+            </div>
+        </div>
+    </dialog>
+
+
+
+    <footer>
+        <button class="btn-open btn-rules" onclick="window.dialog.showModal()">RULES</button>
+    </footer>
+    
+    <script type="module" src="index.js"></script>
+</body>
+</html>

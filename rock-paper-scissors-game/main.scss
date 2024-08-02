@@ -1,0 +1,54 @@
+@use './sass/components/button';
+@use './sass/components/modal';
+@use './sass/components/circle';
+@use './sass/components/scoreBoard';
+@use './sass/components/buttonPlayAgain';
+
+@use './sass/base/typo';
+@use './sass/base/typoColor';
+
+@use './sass/layouts/footerLayout';
+@use './sass/layouts/paddingsLayout';
+@use './sass/layouts/step3Layout';
+@use './sass/utilities/variables';
+
+
+@use './sass/animations/waves';
+
+
+
+*{
+    padding: 0;
+   // TODO: problem margin 0 with the dialog
+}
+
+
+
+
+body{
+    display: flex;
+    flex-direction: column;
+    background: rgb(31,55,86);
+    background: radial-gradient(circle, rgba(31,55,86,1) 35%, rgba(20,21,57,1) 100%);
+    min-height: 100vh;
+}
+
+main{
+    flex: 1;
+    display: grid;
+    place-items: center;
+}
+
+.btnContainer{
+    --btnContainer: 210px;
+    @media (min-width: variables.$sizeDesktop) {
+        --btnContainer: 300px;
+    }
+
+    background-image: url('../images/bg-pentagon.svg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: var(--btnContainer); 
+}
+

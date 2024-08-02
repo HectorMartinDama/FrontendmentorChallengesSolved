@@ -1,0 +1,66 @@
+@use '../utilities/variables';
+
+
+
+footer {
+
+
+    height: 500px;
+
+
+    @media (min-width: 1440px) {
+        height: 160px;
+    }
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+
+
+
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        color: variables.$white;
+        gap: 2rem;
+        list-style: none;
+
+        padding-bottom: 30px;
+        padding-top: 40px;
+
+        @media (min-width: 1440px) {
+            flex-direction: row;
+        }
+    }
+
+    .iconsDesktop {
+        display: none;
+
+        @media (min-width: 1440px) {
+            display: block;
+        }
+
+    }
+
+
+    .iconsMobile {
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        @media (min-width: 1440px) {
+            display: none;
+
+        }
+
+    }
+
+
+
+
+
+
+}

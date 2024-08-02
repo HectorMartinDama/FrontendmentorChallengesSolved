@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+$green: hsl(150, 100%, 66%);
+
+body{
+    background: hsl(218, 23%, 16%);
+}
+
+// centra la carta en el medio
+.mainContainer{
+    display: grid;
+    place-content: center;
+    height: 100vh;
+}
+
+p{
+    color: $green;
+    letter-spacing: 0.3rem;
+    font-family: 'Manrope', sans-serif;
+    text-align: center;
+    padding-top: 2.5rem;
+    font-size: 12px;
+}
+
+h3{
+    color: hsl(193, 38%, 86%);
+    font-size: 25px;
+    font-family: 'Manrope', sans-serif;
+    text-align: center;
+}
+
+.card{
+    width: 340px;
+    min-height: 315px;
+    background: hsl(217, 19%, 24%);
+    border-radius: 1rem;
+    @media (min-width: 1440px){
+        width: 540px;
+        min-height: 330px;
+    }
+}
+
+.cardBody{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-left: 25px;
+    padding-right: 25px;
+    overflow: hidden;
+}
+
+button{
+    background: $green;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: none;
+    position: absolute; 
+    cursor: pointer;
+    transition: 0.5 ease;
+    
+    &:hover{
+        box-shadow: 0 0 2rem 0 $green, 0 0 2rem $green;
+    }
+}
+
+.btnContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

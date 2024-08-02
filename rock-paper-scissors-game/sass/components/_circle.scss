@@ -1,0 +1,113 @@
+@use '../utilities/variables';
+
+:root{
+    --scissorsBottom: 25%;
+    --scissorsLeft: 10%;      
+    --shadowCircleSelected: #{variables.$shadowCircleSelectMobile};
+    --paperSpockTop: 20%;
+    --paperSpockLeft: 10%;
+    --rockLizardTop: 35%;
+    @media (min-width: variables.$sizeDesktop) {
+        --scissorsBottom: 30%;
+        --scissorsLeft: 20%;      
+        --shadowCircleSelected: #{variables.$shadowCircleSelect};
+        --paperSpockTop: 15%;
+        --paperSpockLeft: 20%;
+        --rockLizardTop: 75%;
+        --rockLizardRight: 30%;
+    }
+}
+
+.circle{
+    --circleMeasure: 95px;
+    --border: 10px;
+    --sizeImage: 40px;
+    @media (min-width: variables.$sizeDesktop) {
+        --circleMeasure: 150px;
+        --border: 18px;
+        --sizeImage: 60px;
+    }
+
+
+    border-radius: 50%;
+    border: var(--border) solid transparent;   
+    position: relative;
+    box-shadow: variables.$shadowCircle;
+    width: var(--circleMeasure);
+    height: var(--circleMeasure);
+
+    img{
+        height: var(--sizeImage);
+    }
+}
+
+
+.circle-selected:active{
+    transform: translateY(10px);
+}
+
+
+#paper{
+    background:  linear-gradient(#fff, #fff) padding-box,
+    variables.$PaperGradient;
+    inset: var(--paperSpockTop) 0 0 var(--paperSpockLeft);
+    color: variables.$PaperColorShadow;
+}
+
+#spock{
+    background:  linear-gradient(#fff, #fff) padding-box,
+    variables.$SpockGradient;
+    inset: var(--paperSpockTop) 0 0 var(--paperSpockLeft);
+    color: variables.$SpockColorShadow;   
+}
+
+#scissors{
+    background:  linear-gradient(#fff, #fff) padding-box,
+    variables.$ScissorsGradient;
+    color: variables.$ScissorsColorShadow;
+    inset: auto auto var(--scissorsBottom) var(--scissorsLeft);
+}
+
+#lizard{
+    background:  linear-gradient(#fff, #fff) padding-box,
+    variables.$LizardGradient;
+    color: variables.$LizardColorShadow;
+    inset: var(--rockLizardTop) var(--rockLizardRight) auto auto;
+    @media (max-width: variables.$sizeMobile){
+        inset: var(--rockLizardTop) auto auto 20%;
+   }
+}
+
+#rock{
+    background:  linear-gradient(#fff, #fff) padding-box,
+    variables.$RockGradient;
+    color: variables.$RockColorShadow;
+    inset: var(--rockLizardTop) calc(var(--rockLizardRight) - 5%) 0% auto;
+    @media (max-width: variables.$sizeMobile){
+        inset: var(--rockLizardTop) auto auto 30%;
+    }
+}
+
+
+
+.circle-selected{
+    --border: 15px;
+    --circleSelectedSize: 135px;
+    @media (min-width: variables.$sizeDesktop) {
+        --border: 40px;
+        --circleSelectedSize: 300px;
+    }
+
+    border-radius: 50%;
+    z-index: 1;
+    box-shadow: var(--shadowCircleSelected);
+    border: var(--border) solid transparent;
+    width: var(--circleSelectedSize);
+    height: var(--circleSelectedSize);
+
+    @media(min-width: 1440px){ 
+        img{
+            height: 100px;
+        }
+    }
+}

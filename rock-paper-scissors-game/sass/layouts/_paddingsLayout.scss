@@ -1,0 +1,28 @@
+
+
+footer{
+    padding-bottom: 50px;
+    @media(min-width: 1440px){
+        padding-bottom: 30px;
+        padding-right: 30px;
+    }
+}
+
+
+
+
+
+header{
+    padding-top: 40px;
+}
+
+nav{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 20px;
+    padding-left: 20px;
+
+    p{
+        padding-bottom: 10px;
+    }
+}

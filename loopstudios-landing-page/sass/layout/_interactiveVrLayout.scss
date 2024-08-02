@@ -1,0 +1,79 @@
+@use '../utilities/variables';
+
+
+
+.interactiveVr{
+
+
+    text-align: center;
+    
+
+    @media (min-width: 1440px) {
+        padding-top: 160px;
+    }
+
+
+   
+   
+   
+
+    .interactiveContainer{
+
+        
+        
+        
+
+        @media (min-width: 1440px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+
+            width: 40%;
+            height: 300px;
+
+            h1, p{
+                text-align: start;
+            }
+        }
+
+       
+       
+
+    }
+
+    .fondo{
+        height: 200px;
+       
+        background-image: url('../../images/mobile/image-interactive.jpg');
+        background-repeat: no-repeat;
+        background-size:cover;
+       
+        @media (min-width: 1440px) {
+            background-image: url('../../images/desktop/image-interactive.jpg'); 
+            width: 60%;
+            height: 500px;
+        }
+    }
+
+
+   
+   
+
+
+    @media (min-width: 1440px) {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+    }
+
+
+
+    h1{
+        padding-top: 40px;
+        padding-bottom: 20px;
+    }
+
+    p{
+        text-align: center;
+    }
+}

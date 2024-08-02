@@ -1,0 +1,66 @@
+@use '../utilities/variables';
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap');
+
+
+
+*{
+    font-size: variables.$sizeFont;
+}
+
+li, p, .separator h1, .interactiveVr h1, .card h1, .mobile-nav a{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+}
+
+.card h1{
+    color: variables.$white;
+    text-transform: uppercase;
+    font-size: 40px;
+
+
+    @media (min-width: 1440px) {
+        font-size: 60px;
+    }
+}
+
+footer p{
+    color: variables.$darkGray;
+}
+
+
+.logo{  
+    font-size: 27px;
+    color: variables.$white;
+}
+
+
+.logo, button{
+    font-family: 'Alata', sans-serif;
+    font-weight: 400;
+}
+
+
+
+.separator, .interactiveVr, .mobile-nav {
+    h1, a{
+        text-transform: uppercase;
+        font-size: 30px;
+    } 
+}
+
+.interactiveVr{
+    p{
+        color: variables.$darkGray;
+        font-family: 'Alata', sans-serif;
+        font-weight: 400;
+    }
+}
+
+
+
+.contenedor p{
+    font-size: 27px;
+    text-transform: uppercase;
+    color: variables.$white;
+}
+

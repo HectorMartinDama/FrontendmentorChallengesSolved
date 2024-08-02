@@ -1,0 +1,34 @@
+
+// media query
+$sizeDesktop: 1440px;
+$sizeMobile: 768px;
+$sizeTablet: 1024px;
+
+// shadows
+$shadowCircle: inset hsl(228, 17%, 77%) 1px 8px, 1px 8px;
+$shadowCircleSelect: inset hsl(228, 17%, 77%) 1px 13px, 1px 13px;
+$shadowCircleSelectMobile: inset hsl(233, 15%, 77%) 1px 6px, 1px 6px;
+
+
+
+
+// colors
+$hola: #2596be;
+$scoreText: hsl(229, 64%, 46%);
+$darkText:   hsl(229, 25%, 31%);
+$headerOutline:  hsl(217, 16%, 45%);
+$SpockGradient: linear-gradient(hsl(189, 59%, 53%), hsl(189, 58%, 57%)) border-box;
+$SpockColorShadow: #4A8CA8;
+$ScissorsGradient: linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%)) border-box;
+$ScissorsColorShadow: #B87132;
+$PaperGradient: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%)) border-box;
+$PaperColorShadow: #3042BC;
+$RockGradient: linear-gradient(hsl(349, 71%, 52%),hsl(349, 70%, 56%)) border-box;
+$RockColorShadow: #902534;
+$LizardGradient: linear-gradient(hsl(261, 73%, 60%), hsl(261, 72%, 63%)) border-box;
+$LizardColorShadow: #5838A2;   
+
+
+
+
+

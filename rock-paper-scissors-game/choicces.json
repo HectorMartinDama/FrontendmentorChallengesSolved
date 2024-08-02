@@ -1,0 +1,22 @@
+{
+  "spock": {
+    "name": "spock",
+    "image": "/assets/icon-spock-b919dc37.svg"
+  },
+  "scissors": {
+    "name": "scissors",
+    "image": "/assets/icon-scissors-f778df73.svg"
+  },
+  "paper": {
+    "name": "paper",
+    "image": "/assets/icon-paper-90d57903.svg"
+  },
+  "lizard": {
+    "name": "lizard",
+    "image": "/assets/icon-lizard-3c893e5e.svg"
+  },
+  "rock": {
+    "name": "rock",
+    "image": "/assets/icon-rock-e16feca1.svg"
+  }
+}
